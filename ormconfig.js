@@ -4,7 +4,7 @@ const devConfig = [
     {
         name: "default",
         type: "mongodb",
-        host: "localhost",
+        host: process.env.MONGO_URL,
         port: 27017,
         database: "mernTest",
         useUnifiedTopology: true,
