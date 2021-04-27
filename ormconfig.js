@@ -1,5 +1,4 @@
 require("dotenv/config")
-const path = require("path")
 
 const devConfig = [
     {
@@ -19,7 +18,7 @@ const prodConfig = [
     {
         name: "default",
         type: "mongodb",
-        url: process.env.MONGO_URL,
+        url: "mongodb+srv://deploy-names:deploy@cluster0.vdcox.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
         useNewUrlParser: true,
         synchronize: true,
         database: "mernTest",
@@ -30,4 +29,4 @@ const prodConfig = [
     }
 ]
 
-module.exports = process.env.NODE_ENV === 'development' ? devConfig : prodConfig;
+module.exports = prodConfig
