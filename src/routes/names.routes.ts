@@ -34,4 +34,8 @@ namesRouter.get('/:id', async (request, response) => {
     return response.json(name)
 })
 
+namesRouter.get('/pedro', async (request, response) => {
+    return response.json({pedro: 'pedro'})
+})
+
 export default namesRouter
