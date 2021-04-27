@@ -1,4 +1,5 @@
 require("dotenv/config")
+const path = require("path")
 
 const devConfig = [
     {
@@ -24,7 +25,7 @@ const prodConfig = [
         database: "mernTest",
         useUnifiedTopology: true,
         entities: [
-            "./dist/schemas/*.ts"
+            path.resolve(__dirname, '.', 'dist', 'schemas', '*.ts')
         ]
     }
 ]
