@@ -18,7 +18,7 @@ const prodConfig = [
     {
         name: "default",
         type: "mongodb",
-        url: "mongodb+srv://deploy-names:deploy@cluster0.vdcox.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+        url: process.env.MONGO_URL,
         useNewUrlParser: true,
         synchronize: true,
         database: "mernTest",
@@ -29,4 +29,4 @@ const prodConfig = [
     }
 ]
 
-module.exports = prodConfig
+module.exports = process.env.NODE_ENV === 'development' ? devConfig : prodConfig;
