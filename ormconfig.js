@@ -24,7 +24,7 @@ const prodConfig = [
         database: "mernTest",
         useUnifiedTopology: true,
         entities: [
-            "./src/schemas/*.ts"
+            "./dist/schemas/*.ts"
         ]
     }
 ]
