@@ -18,12 +18,13 @@ const prodConfig = [
     {
         name: "default",
         type: "mongodb",
-        host: process.env.MONGO_URL,
-        port: 27017,
+        url: process.env.MONGO_URL,
+        useNewUrlParser: true,
+        synchronize: true,
         database: "mernTest",
         useUnifiedTopology: true,
         entities: [
-            "./dist/schemas/*.ts"
+            "./src/schemas/*.ts"
         ]
     }
 ]
