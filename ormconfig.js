@@ -25,7 +25,7 @@ const prodConfig = [
         database: "mernTest",
         useUnifiedTopology: true,
         entities: [
-            path.resolve(__dirname, '.', 'dist', 'schemas', '*.ts')
+            "./dist/schemas/*.js"
         ]
     }
 ]
